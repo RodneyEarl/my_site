@@ -5,10 +5,10 @@ class StaticPagesController < ApplicationController
   def work
   end
 
-  def paper
+  def papers
   end
 
-  def reference
+  def references
   end
 
   def contact
