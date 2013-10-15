@@ -1,6 +1,30 @@
 @import "bootstrap";
 
 /* Variables */
+.fileupload {
+  margin-bottom: 9px;
+  .uneditable-input {
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    cursor: text;
+  }
+  .thumbnail {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    text-align: center;
+    > img {
+      display: inline-block;
+      vertical-align: middle;
+      max-height: 100%;
+    }
+  }
+  .btn {
+    vertical-align: middle;
+  }
+}
 $grayMediumLight: #eaeaea;
 
 /* mixin rules */
@@ -79,6 +103,16 @@ footer {
   }
 }
 
+/* Login menu */
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+  li {
+    display: inline;
+  }
+}
+
 /* sidebar */
 
 aside {
@@ -128,6 +162,16 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+/* projects */
+
+ul.projects {
+  list-style-type: none;
+}
+
+input#project_avatar {
+
 }
 
 /* forms */

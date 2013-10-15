@@ -5,9 +5,6 @@ class StaticPagesController < ApplicationController
   def work
   end
 
-  def papers
-  end
-
   def references
   end
 

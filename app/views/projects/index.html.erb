@@ -1,0 +1,16 @@
+
+<div class="row">
+
+  <section>
+    <%= render 'shared/list' %>
+  </section>
+</div>
+<% if signed_in? && current_user.admin? %>
+<br />
+<div class="row">
+  <section>
+    <%= render 'shared/project_form' %>
+  </section>
+</div>
+<% end %>
+

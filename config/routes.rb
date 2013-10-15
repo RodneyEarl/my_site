@@ -1,7 +1,18 @@
 MySite::Application.routes.draw do
 
-  root 'static_pages#home'
+  resources :projects
+
+  devise_for :users, :skip => [:sessions]
+  devise_scope :user do
+    root to: 'static_pages#home'
+    get 'signin' => 'devise/sessions#new', :as => :new_user_session
+    post 'signin' => 'devise/sessions#create', :as => :user_session
+    delete 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
+    match '/sessions/user', to: 'devise/sessions#create', via: :post
+  end
+
   match '/work',       to: 'static_pages#work',       via: 'get'
+  match '/projects',   to: 'projects#index',          via: 'get'
   match '/papers',     to: 'static_pages#papers',     via: 'get'
   match '/references', to: 'static_pages#references', via: 'get'
   match '/contact',    to: 'static_pages#contact',    via: 'get'
